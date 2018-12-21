@@ -1,3 +1,7 @@
+# Hitarth Choubisa
+# Takes a spectrum file as input - currently added as Spectrum.txt
+# Outputs variation of Open circuit voltage, short circuit currents, conversion efficiencies and fill factors as functions of band gaps
+
 import numpy, scipy.interpolate, scipy.integrate, urllib.request, io, tarfile
 import matplotlib.pyplot as plt
 from numpy import exp
@@ -10,7 +14,7 @@ kB = 1.38*10**(-23)
 e = 1.6*10**(-19)
 Tcell = 300
 
-data_array = numpy.genfromtxt('CentaurianSpectrum.txt', delimiter="\t")
+data_array = numpy.genfromtxt('Spectrum.txt', delimiter="\t")
 
 wavelength = data_array[:,0] * 10**(-9)
 spectrum = data_array[:,1] *10**9
